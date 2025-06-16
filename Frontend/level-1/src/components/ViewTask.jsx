@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Modal from "./ui/Modal";
 import checkedBlue from "../assets/blue-checked.svg";
 import { X, AlarmClockCheck, FilePenLine, Trash2 } from "lucide-react";
+import DeleteTask from "./ui/DeleteTask";
 import moment from "moment";
 
 // let task = {
@@ -63,7 +64,10 @@ export default function ViewTask({
             <FilePenLine style={{ color: "green", marginRight: "10px" }} />
             <p className="label-12"> Edit Task</p>
           </div>
-          <div className="view-task-info-box flex cursor-pointer">
+          <div
+            className="view-task-info-box flex cursor-pointer"
+            onClick={handleDeleteTask}
+          >
             <Trash2 style={{ color: "red", marginRight: "10px" }} />
             <p className="label-12"> Delete Task</p>
           </div>
